@@ -5,7 +5,6 @@
 #' @export
 dfTranscription <- function(transcriptionData) {
   transcriptionMap <- read.csv(transcriptionData)
-  #need to add if Gene column exists, that becomes locus tag
   inds <- which(apply(transcriptionMap, 2, function(x) any(grepl("^b0|^KPHS|^PA[[:digit:]]+$", x))))
   colnames(transcriptionMap)[inds] = "locusTag"
   return(transcriptionMap)

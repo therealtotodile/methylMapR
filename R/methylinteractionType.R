@@ -10,4 +10,3 @@ methylinteractionType <- function(tfactormethGene, qualityScore, peakHeight){
                                                 ifelse(tfactormethGene$scorekineticDeviation > qualityScore & tfactormethGene$peakHeight > peakHeight, "promoting_notaffective", "not_methylated"))
   return(tfactormethGene)
 }
-e <- methylinteractionType(f, 10, 150)

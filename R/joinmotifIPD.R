@@ -18,7 +18,6 @@ joinmotifIPD <- function(dfIPD, dfMotif){
                   ipdRatio = dfIPD_0$ipdRatio[inds],
                   scorekineticDeviation = dfIPD_0$score[inds],
                   base = dfIPD_0$base[inds])
-  #next one
   inds <- sapply(dfMotif_1$start, function(x) which.min(abs(x - dfIPD_1$tpl)))
   x2 <- transform(dfMotif_1, methylatedPosition = dfIPD_1$tpl[inds],
                   ipdRatio = dfIPD_1$ipdRatio[inds],
