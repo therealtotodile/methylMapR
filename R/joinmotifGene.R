@@ -1,8 +1,9 @@
-#' Join motifs with ipdRatio call using position, strand
-#' @title Create nearest CDS column
-#' @param dfmotifIPD, A df with ipdRatio data by position
-#' @param dfCDS, A df with CDS name, start site, and end site
-#' @return Dataframe with combined PacBio methylation data, by motif.
+#' @description Join motifs with ipdRatio call using position and strand
+#' @title joinmotifGene
+#' @param dfmotifIPD, A dataframe with ipdRatio data by position
+#' @param dfCDS, A dataframe with CDS (gene) name, start site, and end site
+#' @return A dataframe with combined PacBio methylation data, by motif
+#' @importFrom dplyr 'mutate' 'rename' 'recode'
 #' @export
 joinmotifGene <- function(dfCDS, dfmotifIPD){
   dfCDS <- dfCDS %>% mutate(Orientation=recode(Orientation, 'minus'='0', 'plus'='1'))

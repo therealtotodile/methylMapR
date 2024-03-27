@@ -2,16 +2,16 @@
 % Please edit documentation in R/dfCDS.R
 \name{dfCDS}
 \alias{dfCDS}
-\title{Read CDS}
+\title{dfCDS}
 \usage{
 dfCDS(cdsData)
 }
 \arguments{
-\item{cdsData}{A sequencing dataset that contains the coding region start and end sites annotated onto the genome (.tsv)}
+\item{cdsData}{A sequencing dataset that contains the coding region start and end sites and predicted gene (.tsv)}
 }
 \value{
-The read file
+A dataframe of coding region genes
 }
 \description{
-Load in CDS data
+Load in CDS data, .tsv
 }

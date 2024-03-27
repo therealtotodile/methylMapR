@@ -1,11 +1,10 @@
 Package: methylMapR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Create the functional methylome of any Prokaryotes
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Christopher Fraser Morrissey
+Maintainer: thechrismorrissey@gmail.com
+Description: MethylMapR combines functional genomic data with PacBio single nucleotide real time sequencing data that has been pre-processed through PacBio kineticstools, to help researches quickly determine the relationship between methylation and transcription on a per gene basis.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true

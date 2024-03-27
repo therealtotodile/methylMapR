@@ -2,18 +2,18 @@
 % Please edit documentation in R/joinmotifIPD.R
 \name{joinmotifIPD}
 \alias{joinmotifIPD}
-\title{Create data frame of motifs with associated ipdRatio data}
+\title{joinmotifIPD}
 \usage{
 joinmotifIPD(dfIPD, dfMotif)
 }
 \arguments{
-\item{dfIPD, }{A df (data frame) with ipdRatio data by position}
+\item{dfIPD}{A dataframe with ipdRatio data by position}
 
-\item{dfMotif, }{A df where each row is an identified methylation motif}
+\item{dfMotif}{A dataframe where each row is an identified methylation motif}
 }
 \value{
-The read file
+A dataframe of combined PacBio sequencing kinetics values by motif site
 }
 \description{
-Join motifs with ipdRatio call using position, strand
+Join motifs with ipdRatio call using position and strand
 }

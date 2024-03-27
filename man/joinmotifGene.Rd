@@ -2,18 +2,18 @@
 % Please edit documentation in R/joinmotifGene.R
 \name{joinmotifGene}
 \alias{joinmotifGene}
-\title{Create nearest CDS column}
+\title{joinmotifGene}
 \usage{
 joinmotifGene(dfCDS, dfmotifIPD)
 }
 \arguments{
-\item{dfCDS, }{A df with CDS name, start site, and end site}
+\item{dfCDS, }{A dataframe with CDS (gene) name, start site, and end site}
 
-\item{dfmotifIPD, }{A df with ipdRatio data by position}
+\item{dfmotifIPD, }{A dataframe with ipdRatio data by position}
 }
 \value{
-Dataframe with combined PacBio methylation data, by motif.
+A dataframe with combined PacBio methylation data, by motif
 }
 \description{
-Join motifs with ipdRatio call using position, strand
+Join motifs with ipdRatio call using position and strand
 }

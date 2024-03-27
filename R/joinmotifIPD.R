@@ -1,8 +1,9 @@
-#' Join motifs with ipdRatio call using position, strand
-#' @title Create data frame of motifs with associated ipdRatio data
-#' @param dfIPD, A df (data frame) with ipdRatio data by position
-#' @param dfMotif, A df where each row is an identified methylation motif
-#' @return The read file
+#' @description Join motifs with ipdRatio call using position and strand
+#' @title joinmotifIPD
+#' @param dfIPD A dataframe with ipdRatio data by position
+#' @param dfMotif A dataframe where each row is an identified methylation motif
+#' @return A dataframe of combined PacBio sequencing kinetics values by motif site
+#' @importFrom dplyr 'mutate' 'rename'
 #' @export
 joinmotifIPD <- function(dfIPD, dfMotif){
   dfMotif <- dfMotif %>% mutate(strand=recode(strand, '-'='0', '+'='1'))

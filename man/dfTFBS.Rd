@@ -2,16 +2,16 @@
 % Please edit documentation in R/dfTFBS.R
 \name{dfTFBS}
 \alias{dfTFBS}
-\title{Read ChipSeq data}
+\title{dfTFBS}
 \usage{
 dfTFBS(chipseqData)
 }
 \arguments{
-\item{chipseqData}{A chipSeq dataset that contains the regulator (TF), peak position, and score (.gff)}
+\item{chipseqData}{A ChIPSeq dataset that contains the regulator (TF), peak position, and score (.gff or .csv)}
 }
 \value{
-The read file
+A dataframe of the TF binding data
 }
 \description{
-Load in ChipSeq data
+Load in ChIPSeq data, .csv or .gff
 }

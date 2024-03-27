@@ -2,18 +2,18 @@
 % Please edit documentation in R/joinmotifgeneTranscription.R
 \name{joinmotifgeneTranscription}
 \alias{joinmotifgeneTranscription}
-\title{Transcriptional Reponse}
+\title{joinmotifgeneTranscription}
 \usage{
 joinmotifgeneTranscription(dfmethbasestartGene, dfTranscription)
 }
 \arguments{
-\item{dfmethbasestartGene, }{A motif dataset with ipdRatio and nearest gene}
+\item{dfmethbasestartGene, }{A methylation motif dataframe with ipdRatio and nearest gene}
 
-\item{dfTranscription, }{A transcriptional dataset with gene, and relative abundance of associated mRNA}
+\item{dfTranscription, }{A transcriptional dataframe with gene, and relative abundance of associated mRNA}
 }
 \value{
-The read file
+A dataframe of methylation motifs with each associated gene's transcriptional data
 }
 \description{
-Join methylated base position and associated gene with transcript abundance data, start and end sites
+Join methylation motifs and associated gene with transcript abundance data
 }

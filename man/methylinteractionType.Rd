@@ -2,19 +2,19 @@
 % Please edit documentation in R/methylinteractionType.R
 \name{methylinteractionType}
 \alias{methylinteractionType}
-\title{methylation -- TF Interaction Type}
+\title{methylinteractionType}
 \usage{
 methylinteractionType(tfactormethGene, qualityScore, peakHeight)
 }
 \arguments{
-\item{tfactormethGene, }{A TFBS and methylation motif dataset}
+\item{tfactormethGene}{A TFBS and methylation motif dataset}
 
-\item{qualityScore, }{A quality score cutoff for how certain we are about the presence of kinetic deviation. 10 is equivalent to 90% certainty, 20 is 99.9% and so on.}
+\item{qualityScore}{A quality score cutoff for how certain we are about the presence of kinetic deviation. 10 is equivalent to 90% certainty, 20 is 99.9% and so on}
 
-\item{peakHeight, }{A peak height cutoff for how certain we are about TF binding. 10 is equivalent to 90% certainty, 20 is 99.9% and so on.}
+\item{peakHeight}{A peak height cutoff for how certain we are about TF binding. This will be variable depending on the type of TF binding data used}
 }
 \value{
-The read file
+A column that has the methyl interaction type call (character)
 }
 \description{
 Assign methylation -- TF interaction type, by comparing ipdRatio and scoreTFBS (peak height), can only be called for methylated sites. Based on https://pubmed.ncbi.nlm.nih.gov/31755929/

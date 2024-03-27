@@ -2,19 +2,19 @@
 % Please edit documentation in R/joinmotifgeneFactor.R
 \name{joinmotifgeneFactor}
 \alias{joinmotifgeneFactor}
-\title{TF binding sites}
+\title{joinmotifgeneFactor}
 \usage{
 joinmotifgeneFactor(dfmethbasestartGene, dfTFBS, motifTFBSWindow)
 }
 \arguments{
-\item{dfmethbasestartGene, }{A motif dataset with ipdRatio and nearest gene}
+\item{dfmethbasestartGene}{A motif dataset with ipdRatio and nearest gene}
 
-\item{dfTFBS, }{A CHIP seq/exo dataset with peak and position information}
+\item{dfTFBS}{A CHIP seq/exo dataset with peak and position information}
 
-\item{motifTFBSWindow, }{An integer number that represents the total length of a window that surrounds the chip peak position (peakCenteR). Distance cutoff for motif interaction with a TFBS.}
+\item{motifTFBSWindow}{An integer number that represents the total length of a window that surrounds the chip peak position (peakCenteR). Distance cutoff for motif interaction with a TFBS.}
 }
 \value{
-The read file
+A dataframe of combined methylation and TF binding data
 }
 \description{
 Join methylated base position and associated gene with TFBS (chipSeq) data binding site

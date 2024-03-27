@@ -2,15 +2,15 @@
 % Please edit documentation in R/dfIPD.R
 \name{dfIPD}
 \alias{dfIPD}
-\title{Read IPD csv file}
+\title{dfIPD}
 \usage{
 dfIPD(ipdData)
 }
 \arguments{
-\item{ipd_data}{A sequencing kinetics dataset from PacBio SMRT Sequencing kineticsTools pkg, contains base call and ipdRatio (.csv)}
+\item{ipdData}{A sequencing kinetics dataset from PacBio SMRT Sequencing kineticsTools pkg, contains base call and ipdRatio (.csv)}
 }
 \value{
-The read file
+A dataframe of the genome, that includes the called base and ipdRatio at every base
 }
 \description{
 Load in PacBio methylation data, modifications.csv

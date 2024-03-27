@@ -2,15 +2,15 @@
 % Please edit documentation in R/dfMotif.R
 \name{dfMotif}
 \alias{dfMotif}
-\title{Read motif gff file}
+\title{dfMotif}
 \usage{
 dfMotif(motifData)
 }
 \arguments{
-\item{motifData}{A sequencing kinetics dataset that contains only detected motif positions (.gff)}
+\item{motifData}{A sequencing kinetics dataset that contains the kineticstools detected motif positions (.gff)}
 }
 \value{
-The read file
+A dataframe of methylation motifs
 }
 \description{
 Load in PacBio motif data, motifs.gff

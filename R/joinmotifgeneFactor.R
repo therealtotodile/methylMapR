@@ -1,9 +1,12 @@
-#' Join methylated base position and associated gene with TFBS (chipSeq) data binding site
-#' @title TF binding sites
-#' @param dfmethbasestartGene, A motif dataset with ipdRatio and nearest gene
-#' @param dfTFBS, A CHIP seq/exo dataset with peak and position information
-#' @param motifTFBSWindow, An integer number that represents the total length of a window that surrounds the chip peak position (peakCenteR). Distance cutoff for motif interaction with a TFBS.
-#' @return The read file
+#' @description Join methylated base position and associated gene with TFBS (chipSeq) data binding site
+#' @title joinmotifgeneFactor
+#' @param dfmethbasestartGene A motif dataset with ipdRatio and nearest gene
+#' @param dfTFBS A CHIP seq/exo dataset with peak and position information
+#' @param motifTFBSWindow An integer number that represents the total length of a window that surrounds the chip peak position (peakCenteR). Distance cutoff for motif interaction with a TFBS.
+#' @return A dataframe of combined methylation and TF binding data
+#' @importFrom dplyr 'rename' '%>%' 'mutate'
+#' @importFrom tibble 'as_tibble'
+#' @importFrom sqldf 'sqldf'
 #' @export
 joinmotifgeneFactor <- function(dfmethbasestartGene, dfTFBS, motifTFBSWindow) {
   if("strand" %in% colnames(dfTFBS)){
