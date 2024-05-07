@@ -1,3 +1,4 @@
+"data"
 #' Motifs of E. coli
 #'
 #' Dataset containing SMRT output of sequencing run

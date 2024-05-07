@@ -9,7 +9,7 @@ methylinteractionType(tfactormethGene, qualityScore, peakHeight)
 \arguments{
 \item{tfactormethGene}{A TFBS and methylation motif dataset}
 
-\item{qualityScore}{A quality score cutoff for how certain we are about the presence of kinetic deviation. 10 is equivalent to 90% certainty, 20 is 99.9% and so on}
+\item{qualityScore}{A quality score cutoff for how certain we are about the presence of kinetic deviation. 10 is equivalent to 90 percent certainty, 20 is 99.9 percent and so on}
 
 \item{peakHeight}{A peak height cutoff for how certain we are about TF binding. This will be variable depending on the type of TF binding data used}
 }
