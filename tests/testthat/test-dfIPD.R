@@ -1,6 +1,13 @@
+#source("tests/testthat/setup.R")
+
 test_that("the data type is correct", {
+  setwd("C:/Users/cmorrissey/OneDrive - Illumina, Inc/Documents/methylMapR")
+  IPD <- load("data/dfIPD.rda")
+  dfIPD <- dfIPD[1:40000,]
   expect_is(dfIPD, "data.frame")
   expect_is(dfIPD$ipdRatio, "numeric")
+  rm(dfIPD)
+  #teardown(env)
 })
 
 #some code that is udeful for testing!
