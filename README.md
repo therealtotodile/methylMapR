@@ -5,3 +5,10 @@ MethylMapR is an R pipeline for creating functional methylomes from PacBio singl
 
 MethylMapR expects the PacBio output from kineticstools, specifically the motifs.gff and modifications.csv files.
 All other datatypes -- coding sequence, transcriptional data, and transcription factor binding data can be of numerous output types.
+
+Install Instructions:
+library(devtools)
+install_github("therealtotodile/methylMapR")
+library(methylMapR)
+or
+download as tarball from github repo

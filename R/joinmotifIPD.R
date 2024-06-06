@@ -6,6 +6,9 @@
 #' @importFrom dplyr 'mutate' 'rename'
 #' @export
 joinmotifIPD <- function(dfIPD, dfMotif){
+  if (!is.factor(dfMotif$strand)) {
+    dfMotif$strand <- as.factor(dfMotif$strand)
+  }
   dfMotif <- dfMotif %>% mutate(strand=recode(strand, '-'='0', '+'='1'))
   dfMotif <- dfMotif %>% rename(scoreMotif = score)
   #split in two by strand

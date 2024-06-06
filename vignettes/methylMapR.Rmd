@@ -17,3 +17,35 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(methylMapR)
 ```
+
+```{r}
+#install package
+#library(devtools)
+#install_github("therealtotodile/methylMapR")
+#library(methylMapR)
+#set directory, change this path!
+#setwd("C:/Users/cmorrissey/OneDrive - Illumina, Inc/Documents/methylMapR")
+#exports
+#Run Pipeline
+#Load motifs.gff
+load("~/methylMapR/tests/testthat/data/Motif.rda")
+#Load modifications.csv
+load("~/methylMapR/tests/testthat/data/IPD.rda")
+#Load annotated genes, .tsv
+load("~/methylMapR/tests/testthat/data/CDS.rda")
+#Load transcription data, .csv
+load("~/methylMapR/tests/testthat/data/Transcription.rda")
+#Load transcription factor binding site data
+load("~/methylMapR/tests/testthat/data/TFBS.rda")
+#Combine methylation and motif data
+print(class(Motif$strand))
+motifIPD <- methylMapR::joinmotifIPD(IPD,Motif)
+#Combine methylation motif with gene annotation data
+motifGene <- methylMapR::joinmotifGene(CDS,motifIPD)
+#Combine methylation motif + gene sets with transcription data
+motifgeneTranscription <- methylMapR::joinmotifgeneTranscription(motifGene,Transcription)
+#Combine methylation motif + gene sets with TFBS data
+motifgeneFactor <- methylMapR::joinmotifgeneFactor(motifGene, TFBS, 10)
+#Predict methylation/transcription interaction types
+methylinteractionType <- methylMapR::methylinteractionType(motifgeneFactor, 10, 100)
+```
